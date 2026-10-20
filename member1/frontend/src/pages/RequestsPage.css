@@ -1,0 +1,209 @@
+/* ── Header Row ──────────────────────────────────── */
+.page-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.create-request-btn {
+  background: linear-gradient(135deg, #0ea5e9, #0284c7);
+  border: none;
+  color: #fff;
+  padding: 0.65rem 1.25rem;
+  border-radius: 0.6rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(14, 165, 233, 0.35);
+  transition: all 0.2s;
+}
+
+.create-request-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(14, 165, 233, 0.5);
+}
+
+.refresh-link {
+  background: none;
+  border: none;
+  color: #38bdf8;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.refresh-link:hover {
+  text-decoration: underline;
+}
+
+/* ── Requests Card ──────────────────────────────── */
+.requests-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1rem;
+  overflow: hidden;
+  animation: fadeSlideUp 0.4s ease;
+}
+
+.requests-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 1.75rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  color: #94a3b8;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+/* ── Request Row ────────────────────────────────── */
+.requests-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.request-row {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.15rem 1.75rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  transition: background 0.15s;
+}
+
+.request-row:last-child {
+  border-bottom: none;
+}
+
+.request-row:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.req-id {
+  font-size: 0.85rem;
+  font-family: monospace;
+  color: #38bdf8;
+  font-weight: 700;
+  min-width: 110px;
+}
+
+.req-change {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.req-field {
+  font-size: 0.8rem;
+  color: #64748b;
+}
+
+.req-field strong {
+  color: #cbd5e1;
+}
+
+.req-values {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.old-val {
+  color: #f87171;
+  text-decoration: line-through;
+}
+
+.arrow {
+  color: #475569;
+}
+
+.new-val {
+  color: #86efac;
+  font-weight: 700;
+}
+
+.req-reason {
+  font-size: 0.82rem;
+  color: #94a3b8;
+  font-style: italic;
+}
+
+.req-decision-note {
+  font-size: 0.78rem;
+  color: #fcd34d;
+  background: rgba(245, 158, 11, 0.1);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  align-self: flex-start;
+  margin-top: 0.2rem;
+}
+
+.req-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.req-date {
+  font-size: 0.78rem;
+  color: #475569;
+}
+
+/* ── Status Badges ──────────────────────────────── */
+.status-badge {
+  padding: 0.3rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.status--draft       { background: rgba(100,116,139,0.2); color: #94a3b8; border: 1px solid rgba(100,116,139,0.3); }
+.status--submitted   { background: rgba(59,130,246,0.2);  color: #93c5fd; border: 1px solid rgba(59,130,246,0.3); }
+.status--review      { background: rgba(139,92,246,0.2);  color: #c4b5fd; border: 1px solid rgba(139,92,246,0.3); }
+.status--info        { background: rgba(245,158,11,0.2);  color: #fcd34d; border: 1px solid rgba(245,158,11,0.3); }
+.status--approved    { background: rgba(34,197,94,0.2);   color: #86efac; border: 1px solid rgba(34,197,94,0.3); }
+.status--rejected    { background: rgba(239,68,68,0.2);   color: #fca5a5; border: 1px solid rgba(239,68,68,0.3); }
+
+/* ── Empty State ─────────────────────────────────── */
+.empty-requests {
+  text-align: center;
+  padding: 3.5rem 2rem;
+  color: #94a3b8;
+}
+
+.empty-requests .empty-icon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.empty-requests p {
+  margin-bottom: 1.25rem;
+  font-size: 0.95rem;
+}
+
+.field-hint {
+  font-size: 0.75rem;
+  color: #64748b;
+  margin-top: 0.25rem;
+  display: block;
+}
+
+@media (max-width: 640px) {
+  .request-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  .req-values {
+    flex-wrap: wrap;
+  }
+}
